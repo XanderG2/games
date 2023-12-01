@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MurderAtMidnight 2</title>
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate(
+        "unityContainer",
+        "Build/webgl.json",
+        { onProgress: UnityProgress }
+      );
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div
+        id="unityContainer"
+        style="
+          width: 960px;
+          height: 600px;
+          padding: 0px;
+          margin: 0px;
+          border: 0px;
+          position: relative;
+          background: rgb(35, 31, 32);
+        "
+      >
+        <canvas
+          id="#canvas"
+          style="width: 100%; height: 100%; cursor: default"
+          width="960"
+          height="600"
+        ></canvas>
+        <div class="logo Dark" style="display: none"></div>
+        <div class="progress Dark" style="display: none">
+          <div class="empty" style="width: 0%"></div>
+          <div class="full" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">MurderAtMidnight 2</div>
+      </div>
+    </div>
+
+    <script
+      src="blob:https://cece.uco.edu/6a8dc0ec-e660-4847-9a48-6e795886f0ae"
+      id="6426c3373db85ab65e38104c6f27ffaf"
+    ></script>
+  </body>
+</html>
